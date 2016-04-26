@@ -10,7 +10,7 @@ export default class Form extends React.Component {
 
     onFormSubmit(e) {
         e.preventDefault();
-        const {onSubmit, onErrors, onValues} = this.props;
+        const {onSubmit, onErrors} = this.props;
         let values = {};
         let errors = {};
         this.forEachKey(key=> {
@@ -20,8 +20,7 @@ export default class Form extends React.Component {
             const error = field.getValidationError();
             if (error) errors[key] = error;
         });
-        onSubmit(values, errors);
-        Object.keys(errors).length > 0 ? onErrors(errors) : onValues(values);
+        Object.keys(errors).length > 0 ? onErrors(errors) : onSubmit(values);
     }
 
     forEachKey(callback) {
@@ -59,11 +58,8 @@ Form.propTypes = {
     // func(values), called with only changed values
     onChange: React.PropTypes.func,
 
-    // func(values, errors)
-    onSubmit: React.PropTypes.func,
-
     // func(values)
-    onValues: React.PropTypes.func,
+    onSubmit: React.PropTypes.func,
 
     // func(errors)
     onErrors: React.PropTypes.func
@@ -88,6 +84,7 @@ class Field extends React.Component {
         };
 
         // if there are no values, this is an uncontrolled form
+        // but the fields are controlled by form
         if (props.value === undefined) state.value = null;
 
         const value = this.getValue(props, state);
