@@ -9,6 +9,8 @@
     "meteor-node-stubs": "~0.2.0",
     "react": "^15.0.1",
     "react-bootstrap": "^0.29.2",
-    "react-dom": "^15.0.1"
+    "react-dom": "^15.0.1",
+    "shaking-react-form": "^1.0.0",
+    "react-bootstrap-shaking-react-form-field": "^1.0.0"
   }
 }

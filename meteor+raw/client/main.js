@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import ShackingForm from './lib/form';
-import RawShakingReactFormField from './lib/raw-shaking-react-form-field';
+import ShackingForm from 'shaking-react-form';
+import RawShakingReactFormField from 'raw-shaking-react-form-field';
 
 const schemas = {
     username: {
