@@ -1,0 +1,15 @@
+{
+  "name": "test-shaking-react-form",
+  "private": true,
+  "scripts": {
+    "start": "meteor run"
+  },
+  "dependencies": {
+    "lodash": "^4.11.1",
+    "meteor-node-stubs": "~0.2.0",
+    "react": "^15.0.1",
+    "react-dom": "^15.0.1",
+    "react-mapper": "^1.0.0",
+    "shaking-react-form": "^1.0.0"
+  }
+}
