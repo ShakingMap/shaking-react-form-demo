@@ -6,11 +6,11 @@
   },
   "dependencies": {
     "lodash": "^4.11.1",
-    "meteor-node-stubs": "~0.2.0",
+    "meteor-node-stubs": "^0.2.3",
     "react": "^15.0.1",
     "react-bootstrap": "^0.29.2",
+    "react-bootstrap-shaking-react-form-field": "^1.1.0",
     "react-dom": "^15.0.1",
-    "shaking-react-form": "^1.0.0",
-    "react-bootstrap-shaking-react-form-field": "^1.0.0"
+    "shaking-react-form": "^1.1.0"
   }
 }

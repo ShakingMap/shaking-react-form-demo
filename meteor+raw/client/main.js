@@ -131,12 +131,37 @@ class TestPage extends React.Component {
     render() {
         return <div className="container">
             <h1>test page</h1>
+            <h2>form</h2>
             <ShackingForm
                 schemas={schemas}
                 values={this.state}
                 onChange={(values)=>{this.setState(values)}}
                 onSubmit={(values)=>console.log('submit', values)}
                 onErrors={(errors)=>console.log('errors', errors)}
+            >
+                <button type="submit">Submit</button>
+            </ShackingForm>
+
+            <h2>readonly form</h2>
+            <ShackingForm
+                schemas={schemas}
+                values={this.state}
+                onChange={(values)=>{this.setState(values)}}
+                onSubmit={(values)=>console.log('submit', values)}
+                onErrors={(errors)=>console.log('errors', errors)}
+                readOnly
+            >
+                <button type="submit">Submit</button>
+            </ShackingForm>
+
+            <h2>disabled form</h2>
+            <ShackingForm
+                schemas={schemas}
+                values={this.state}
+                onChange={(values)=>{this.setState(values)}}
+                onSubmit={(values)=>console.log('submit', values)}
+                onErrors={(errors)=>console.log('errors', errors)}
+                disabled
             >
                 <button type="submit">Submit</button>
             </ShackingForm>
